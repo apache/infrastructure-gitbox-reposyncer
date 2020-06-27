@@ -1,0 +1,26 @@
+# Paths where repositories live on disk
+paths:
+    - /x1/repos/asf/
+    - /x1/repos/alternate/
+
+# Log file for successful syncs and errors
+logfile: /x1/logs/sync-log.txt
+
+# User/pushlog DB (sqlite)
+database: /x1/db/gitbox.db
+
+# Push log directory
+pushlogs: /x1/pushlogs/
+
+# Storage of repository wikis
+wikipath: /x1/repos/wikis
+
+# File pointers for broken repositories (so gitbox->github sync process is in the know)
+# Will place e.g. infrastructure-blocky.txt if infrastructure-blocky.git is out of sync
+brokenpath: /x1/gitbox/broken
+
+# SQS API URL
+sqs_api:  https://redacted.execute-api.us-west-1.amazonaws.com/default
+
+# Git post-receive hook to fire off
+githook: /x1/gitbox/hooks/post-receive
