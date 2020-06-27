@@ -1,0 +1,13 @@
+[Unit]
+Description=GitBox Repository Syncer
+ 
+[Service]
+Type=simple
+WorkingDirectory=/opt/gitbox-reposyncer
+ExecStart=/usr/local/bin/pipenv run python3 reposyncer.py
+Restart=always
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target
